@@ -1,65 +1,42 @@
-// ------------------------------
-// Theme Switching (CSS File Swap)
-// ------------------------------
-
 const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 const savedTheme = localStorage.getItem("joycode-theme");
 const themeIcon = document.getElementById("theme-icon");
 const themeStylesheet = document.getElementById("themeStylesheet");
 
-// Determine initial theme
-let theme;
+// ------------------------------
+// Apply saved or preferred theme
+// ------------------------------
+let theme = savedTheme || (prefersDark ? "dark" : "light");
 
-if (savedTheme) {
-    theme = savedTheme;
-} else {
-    theme = prefersDark ? "dark" : "light";
-}
-
-// Apply initial theme
 if (theme === "dark") {
-    themeStylesheet.href = "dark.css";
+    themeStylesheet.href = themeStylesheet.href.replace("style.css", "dark.css");
     themeIcon.textContent = "☀️";
 } else {
-    themeStylesheet.href = "style.css";
     themeIcon.textContent = "🌙";
 }
 
-// Save theme
 localStorage.setItem("joycode-theme", theme);
 
 // ------------------------------
-// Toggle theme on click
+// Toggle theme
 // ------------------------------
-themeIcon.addEventListener("click", () => {
+function toggleTheme() {
     const isDark = themeStylesheet.href.includes("dark.css");
 
     if (isDark) {
-        themeStylesheet.href = "../assets/style.css";
+        themeStylesheet.href = themeStylesheet.href.replace("dark.css", "style.css");
         themeIcon.textContent = "🌙";
         localStorage.setItem("joycode-theme", "light");
     } else {
-        themeStylesheet.href = "../assets/dark.css";
+        themeStylesheet.href = themeStylesheet.href.replace("style.css", "dark.css");
         themeIcon.textContent = "☀️";
         localStorage.setItem("joycode-theme", "dark");
     }
-});
+}
 
-// ------------------------------
+themeIcon.addEventListener("click", toggleTheme);
+
 // Optional: Press "T" to toggle
-// ------------------------------
 document.addEventListener("keydown", (e) => {
-    if (e.key.toLowerCase() === "t") {
-        const isDark = themeStylesheet.href.includes("dark.css");
-
-        if (isDark) {
-            themeStylesheet.href = "../assets/style.css";
-            themeIcon.textContent = "🌙";
-            localStorage.setItem("joycode-theme", "light");
-        } else {
-            themeStylesheet.href = "../assets/dark.css";
-            themeIcon.textContent = "☀️";
-            localStorage.setItem("joycode-theme", "dark");
-        }
-    }
+    if (e.key.toLowerCase() === "t") toggleTheme();
 });
