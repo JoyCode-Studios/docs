@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StudyHub Docs – Developer Setup (React + Vite)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="topbar-inner">
+        <div class="logo">StudyHub Docs</div>
+
+        <nav class="top-icons">
+            <a href="https://github.com/Skyline-Studies/studyhub-web"
+               class="icon-link"
+               title="GitHub"
+               target="_blank"
+               rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="https://www.youtube.com/@JoyCode-Studios"
+               class="icon-link"
+               title="YouTube"
+               target="_blank"
+               rel="noopener noreferrer">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+
+            <a href="#" class="icon-link" id="theme-icon" title="Toggle Theme">🌙</a>
+        </nav>
+    </div>
+</header>
+
+<aside class="sidebar">
+    <nav>
+        <ul class="section">
+            <li class="section-title">StudyHub Docs</li>
+            <li><a href="getting-started.html">2. Getting Started</a></li>
+            <li><a href="dashboard-overview.html">3. Dashboard Overview</a></li>
+            <li><a href="notes.html">4. Notes System</a></li>
+            <li><a href="tasks.html">5. Tasks System</a></li>
+            <li><a href="subjects.html">6. Subjects Manager</a></li>
+            <li><a href="timetable.html">7. Timetable</a></li>
+            <li><a href="listify.html">8. Listify Integration</a></li>
+            <li><a href="storage.html">9. Data Storage</a></li>
+            <li><a href="platforms.html">10. Platform Support</a></li>
+            <li><a class="active" href="developer-setup.html">11. Developer Setup</a></li>
+            <li><a href="project-structure.html">12. Project Structure</a></li>
+            <li><a href="contributing.html">13. Contributing</a></li>
+            <li><a href="faq.html">14. FAQ</a></li>
+            <li><a href="syncing.html">16. Syncing Between Devices</a></li>
+            <li><a href="privacy.html">17. Privacy & Data Handling</a></li>
+        </ul>
+    </nav>
+</aside>
+
+<main class="content">
+
+    <h1>Developer Setup (React + Vite)</h1>
+
+    <p>
+        StudyHub Web is built using <strong>React</strong>, <strong>JavaScript</strong>, <strong>JSX</strong>, and <strong>Vite</strong>.
+        This page explains how to clone the repository, install dependencies, and run the project locally.
+        The setup is lightweight and fast, matching the simplicity of the StudyHub ecosystem.
+    </p>
+
+    <h2>Requirements</h2>
+    <p>
+        Before you begin, make sure you have the following installed:
+    </p>
+
+    <ul>
+        <li><strong>Node.js</strong> (version 18 or later recommended)</li>
+        <li><strong>npm</strong> or <strong>yarn</strong></li>
+        <li>A modern code editor (VS Code recommended)</li>
+    </ul>
+
+    <h2>1. Clone the Repository</h2>
+    <p>
+        Open your terminal and run:
+    </p>
+
+    <pre><code>git clone https://github.com/Skyline-Studies/studyhub-web.git
+cd studyhub-web</code></pre>
+
+    <h2>2. Install Dependencies</h2>
+    <p>
+        Install all required packages using npm or yarn:
+    </p>
+
+    <pre><code>npm install</code></pre>
+
+    <p>or</p>
+
+    <pre><code>yarn install</code></pre>
+
+    <h2>3. Start the Development Server</h2>
+    <p>
+        Vite provides a fast dev server with instant hot‑reload. Start it using:
+    </p>
+
+    <pre><code>npm run dev</code></pre>
+
+    <p>or</p>
+
+    <pre><code>yarn dev</code></pre>
+
+    <p>
+        The terminal will show a local development URL, usually:
+    </p>
+
+    <pre><code>http://localhost:5173</code></pre>
+
+    <h2>4. Build for Production</h2>
+    <p>
+        To generate an optimised production build:
+    </p>
+
+    <pre><code>npm run build</code></pre>
+
+    <p>or</p>
+
+    <pre><code>yarn build</code></pre>
+
+    <p>
+        The output will be placed in the <code>dist/</code> folder.
+    </p>
+
+    <h2>5. Preview the Production Build</h2>
+    <p>
+        You can preview the built version locally using:
+    </p>
+
+    <pre><code>npm run preview</code></pre>
+
+    <p>or</p>
+
+    <pre><code>yarn preview</code></pre>
+
+    <h2>6. Recommended Extensions (VS Code)</h2>
+    <ul>
+        <li>ESLint</li>
+        <li>Prettier</li>
+        <li>React Tools</li>
+        <li>Vite Helper</li>
+    </ul>
+
+    <h2>7. Folder Structure</h2>
+    <p>
+        For a full breakdown of the project layout, see the next page:
+    </p>
+
+    <p><strong>12. Project Structure</strong></p>
+
+    <h2>You're Ready to Develop</h2>
+    <p>
+        Once the dev server is running, you can begin editing components, pages, and logic.
+        Vite will instantly reload changes, making development fast and smooth.
+    </p>
+
+</main>
+
+<script src="../assets/script.js"></script>
+</body>
+</html>

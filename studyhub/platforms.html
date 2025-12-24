@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StudyHub Docs – Platform Support</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="topbar-inner">
+        <div class="logo">StudyHub Docs</div>
+
+        <nav class="top-icons">
+            <a href="https://github.com/Skyline-Studies/studyhub-web"
+               class="icon-link"
+               title="GitHub"
+               target="_blank"
+               rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="https://www.youtube.com/@JoyCode-Studios"
+               class="icon-link"
+               title="YouTube"
+               target="_blank"
+               rel="noopener noreferrer">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+
+            <a href="#" class="icon-link" id="theme-icon" title="Toggle Theme">🌙</a>
+        </nav>
+    </div>
+</header>
+
+<aside class="sidebar">
+    <nav>
+        <ul class="section">
+            <li class="section-title">StudyHub Docs</li>
+            <li><a href="getting-started.html">2. Getting Started</a></li>
+            <li><a href="dashboard-overview.html">3. Dashboard Overview</a></li>
+            <li><a href="notes.html">4. Notes System</a></li>
+            <li><a href="tasks.html">5. Tasks System</a></li>
+            <li><a href="subjects.html">6. Subjects Manager</a></li>
+            <li><a href="timetable.html">7. Timetable</a></li>
+            <li><a href="listify.html">8. Listify Integration</a></li>
+            <li><a href="storage.html">9. Data Storage</a></li>
+            <li><a class="active" href="platforms.html">10. Platform Support</a></li>
+            <li><a href="developer-setup.html">11. Developer Setup</a></li>
+            <li><a href="project-structure.html">12. Project Structure</a></li>
+            <li><a href="contributing.html">13. Contributing</a></li>
+            <li><a href="faq.html">14. FAQ</a></li>
+            <li><a href="syncing.html">16. Syncing Between Devices</a></li>
+            <li><a href="privacy.html">17. Privacy & Data Handling</a></li>
+        </ul>
+    </nav>
+</aside>
+
+<main class="content">
+
+    <h1>Platform Support</h1>
+
+    <p>
+        StudyHub is designed to be accessible on a wide range of devices. The core version
+        of StudyHub runs entirely in the browser, while a dedicated mobile app is planned
+        for future release. This page explains which platforms are supported and how the
+        experience differs across devices.
+    </p>
+
+    <h2>Web Platform (Primary)</h2>
+    <p>
+        The main version of StudyHub is built using React, JavaScript, JSX, and Vite.
+        It runs directly in modern browsers without installation.
+    </p>
+
+    <ul>
+        <li>Google Chrome</li>
+        <li>Microsoft Edge</li>
+        <li>Mozilla Firefox</li>
+        <li>Safari</li>
+        <li>Opera</li>
+    </ul>
+
+    <p>
+        The web version is fully responsive and works on:
+    </p>
+
+    <ul>
+        <li>Windows</li>
+        <li>macOS</li>
+        <li>Linux</li>
+        <li>Chromebooks</li>
+        <li>iPadOS (Safari)</li>
+        <li>Android tablets (Chrome)</li>
+    </ul>
+
+    <h2>Mobile Web</h2>
+    <p>
+        StudyHub works on mobile browsers, but the layout is optimised primarily for desktop
+        and tablet use. On smaller screens:
+    </p>
+
+    <ul>
+        <li>the sidebar collapses into a menu</li>
+        <li>the dashboard rearranges into a vertical layout</li>
+        <li>notes and tasks use a simplified editor</li>
+    </ul>
+
+    <p>
+        Mobile web is fully functional, but the upcoming mobile app will provide a smoother,
+        more native experience.
+    </p>
+
+    <h2>Mobile App (Coming Soon)</h2>
+    <p>
+        A dedicated mobile version of StudyHub is planned using <strong>React Native</strong>.
+        This will allow StudyHub to run as a native app on:
+    </p>
+
+    <ul>
+        <li>iOS</li>
+        <li>Android</li>
+    </ul>
+
+    <p>
+        The mobile app will include:
+    </p>
+
+    <ul>
+        <li>offline support</li>
+        <li>a redesigned mobile‑first UI</li>
+        <li>faster access to notes and tasks</li>
+        <li>optional Listify cloud sync</li>
+    </ul>
+
+    <h2>Performance Considerations</h2>
+    <p>
+        StudyHub is lightweight and performs well even on low‑power devices. Because it uses
+        <code>localStorage</code> instead of a backend, loading times are nearly instant.
+    </p>
+
+    <p>
+        The only feature requiring internet access is Listify cloud sync.
+    </p>
+
+    <h2>Browser Requirements</h2>
+    <p>
+        StudyHub requires a browser that supports:
+    </p>
+
+    <ul>
+        <li>ES6 JavaScript</li>
+        <li>localStorage</li>
+        <li>CSS variables</li>
+        <li>Flexbox and Grid</li>
+    </ul>
+
+    <p>
+        These features are supported by all major browsers released after 2018.
+        This is the list of supported browsers: Google Chrome latest, Microsoft Edge latest, Mozilla Firefox latest, Safari 12+, Opera latest and JoyCode Studios Nexion latest.
+    </p>
+
+    <h2>Next Steps</h2>
+    <p>
+        Continue to the next page to learn how to set up StudyHub for development using
+        React and Vite.
+    </p>
+
+</main>
+
+<script src="../assets/script.js"></script>
+</body>
+</html>

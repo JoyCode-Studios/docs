@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StudyHub Docs – Privacy & Data Handling</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="topbar-inner">
+        <div class="logo">StudyHub Docs</div>
+
+        <nav class="top-icons">
+            <a href="https://github.com/Skyline-Studies/studyhub-web"
+               class="icon-link"
+               title="GitHub"
+               target="_blank"
+               rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="https://www.youtube.com/@JoyCode-Studios"
+               class="icon-link"
+               title="YouTube"
+               target="_blank"
+               rel="noopener noreferrer">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+
+            <a href="#" class="icon-link" id="theme-icon" title="Toggle Theme">🌙</a>
+        </nav>
+    </div>
+</header>
+
+<aside class="sidebar">
+    <nav>
+        <ul class="section">
+            <li class="section-title">StudyHub Docs</li>
+            <li><a href="getting-started.html">2. Getting Started</a></li>
+            <li><a href="dashboard-overview.html">3. Dashboard Overview</a></li>
+            <li><a href="notes.html">4. Notes System</a></li>
+            <li><a href="tasks.html">5. Tasks System</a></li>
+            <li><a href="subjects.html">6. Subjects Manager</a></li>
+            <li><a href="timetable.html">7. Timetable</a></li>
+            <li><a href="listify.html">8. Listify Integration</a></li>
+            <li><a href="storage.html">9. Data Storage</a></li>
+            <li><a href="platforms.html">10. Platform Support</a></li>
+            <li><a href="developer-setup.html">11. Developer Setup</a></li>
+            <li><a href="project-structure.html">12. Project Structure</a></li>
+            <li><a href="contributing.html">13. Contributing</a></li>
+            <li><a href="faq.html">14. FAQ</a></li>
+            <li><a href="syncing.html">16. Syncing Between Devices</a></li>
+            <li><a class="active" href="privacy.html">17. Privacy & Data Handling</a></li>
+        </ul>
+    </nav>
+</aside>
+
+<main class="content">
+
+    <h1>Privacy & Data Handling</h1>
+
+    <p>
+        StudyHub is designed with privacy, simplicity, and user control at its core.
+        This page explains how StudyHub handles your data, what is stored locally,
+        what is stored in the cloud (via Listify), and how your information is protected.
+    </p>
+
+    <h2>Local Data (Stored on Your Device)</h2>
+
+    <p>
+        StudyHub Web stores all core data using <code>localStorage</code>.  
+        This means:
+    </p>
+
+    <ul>
+        <li>your data never leaves your device</li>
+        <li>no servers are involved</li>
+        <li>no accounts are required</li>
+        <li>everything works offline</li>
+    </ul>
+
+    <p>
+        The following data is stored locally:
+    </p>
+
+    <ul>
+        <li>notes</li>
+        <li>tasks</li>
+        <li>subjects</li>
+        <li>timetable entries</li>
+        <li>theme preference (light/dark)</li>
+    </ul>
+
+    <h2>LocalStorage Keys</h2>
+
+    <pre><code>studyhub_notes
+studyhub_tasks
+studyhub_subjects
+studyhub_timetable
+studyhub_theme</code></pre>
+
+    <p>
+        These keys contain structured JSON data used by the app.
+    </p>
+
+    <h2>Cloud Data (Listify Integration)</h2>
+
+    <p>
+        StudyHub itself does not upload or sync your data.  
+        However, if you choose to use <strong>Listify</strong>, the following data may be stored
+        in Cloud Firestore:
+    </p>
+
+    <ul>
+        <li>cloud‑synced notes</li>
+        <li>lists and checklists</li>
+        <li>account information (handled by Listify)</li>
+    </ul>
+
+    <p>
+        StudyHub does not store or access your Listify login credentials.
+        Authentication happens entirely on Listify’s side.
+    </p>
+
+    <h2>What StudyHub Never Collects</h2>
+
+    <p>
+        StudyHub Web does <strong>not</strong> collect:
+    </p>
+
+    <ul>
+        <li>personal information</li>
+        <li>email addresses</li>
+        <li>IP addresses</li>
+        <li>usage analytics</li>
+        <li>cookies (other than browser‑managed localStorage)</li>
+    </ul>
+
+    <p>
+        Everything stays on your device unless you explicitly use Listify.
+    </p>
+
+    <h2>Clearing Your Data</h2>
+
+    <p>
+        You can delete all StudyHub data by clearing your browser’s site storage.
+        This will remove:
+    </p>
+
+    <ul>
+        <li>notes</li>
+        <li>tasks</li>
+        <li>subjects</li>
+        <li>timetable</li>
+        <li>theme settings</li>
+    </ul>
+
+    <p>
+        This action cannot be undone.
+    </p>
+
+    <h2>Security Considerations</h2>
+
+    <p>
+        Because StudyHub uses localStorage:
+    </p>
+
+    <ul>
+        <li>your data is not transmitted anywhere</li>
+        <li>your data is not shared with third parties</li>
+        <li>your data is only as secure as your device/browser</li>
+    </ul>
+
+    <p>
+        For cloud‑synced notes, Listify handles all encryption and authentication.
+    </p>
+
+    <h2>StudyHub Mobile</h2>
+
+    <p>
+        The upcoming StudyHub Mobile app (React Native) will follow a similar privacy model:
+    </p>
+
+    <ul>
+        <li>local storage for offline data</li>
+        <li>optional cloud sync via Listify</li>
+        <li>no hidden analytics</li>
+        <li>no unnecessary permissions</li>
+    </ul>
+
+    <h2>Licensing</h2>
+
+    <ul>
+        <li><strong>StudyHub Web</strong> — MIT License</li>
+        <li><strong>StudyHub Mobile</strong> — Apache License 2.0</li>
+    </ul>
+
+    <p>
+        Both licenses allow transparency, modification, and community contributions.
+    </p>
+
+    <h2>Your Privacy Matters</h2>
+
+    <p>
+        StudyHub is built to respect your privacy by default.  
+        No accounts, no tracking, no hidden data collection — just a clean, offline‑friendly
+        study tool that keeps your information where it belongs: on your device.
+    </p>
+
+</main>
+
+<script src="../assets/script.js"></script>
+</body>
+</html>

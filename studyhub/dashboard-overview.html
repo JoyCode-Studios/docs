@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StudyHub Docs – Dashboard Overview</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="topbar-inner">
+        <div class="logo">StudyHub Docs</div>
+
+        <nav class="top-icons">
+            <a href="https://github.com/Skyline-Studies/studyhub-web"
+               class="icon-link"
+               title="GitHub"
+               target="_blank"
+               rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="https://www.youtube.com/@JoyCode-Studios"
+               class="icon-link"
+               title="YouTube"
+               target="_blank"
+               rel="noopener noreferrer">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+
+            <a href="#" class="icon-link" id="theme-icon" title="Toggle Theme">🌙</a>
+        </nav>
+    </div>
+</header>
+
+<aside class="sidebar">
+    <nav>
+        <ul class="section">
+            <li class="section-title">StudyHub Docs</li>
+            <li><a href="getting-started.html">2. Getting Started</a></li>
+            <li><a class="active" href="dashboard-overview.html">3. Dashboard Overview</a></li>
+            <li><a href="notes.html">4. Notes System</a></li>
+            <li><a href="tasks.html">5. Tasks System</a></li>
+            <li><a href="subjects.html">6. Subjects Manager</a></li>
+            <li><a href="timetable.html">7. Timetable</a></li>
+            <li><a href="listify.html">8. Listify Integration</a></li>
+            <li><a href="storage.html">9. Data Storage</a></li>
+            <li><a href="platforms.html">10. Platform Support</a></li>
+            <li><a href="developer-setup.html">11. Developer Setup</a></li>
+            <li><a href="project-structure.html">12. Project Structure</a></li>
+            <li><a href="contributing.html">13. Contributing</a></li>
+            <li><a href="faq.html">14. FAQ</a></li>
+            <li><a href="syncing.html">16. Syncing Between Devices</a></li>
+            <li><a href="privacy.html">17. Privacy & Data Handling</a></li>
+        </ul>
+    </nav>
+</aside>
+
+<main class="content">
+
+    <h1>Dashboard Overview</h1>
+
+    <p>
+        The StudyHub dashboard is the central place where you can quickly view your tasks,
+        subjects, timetable, and shortcuts to the main tools. It is designed to give you
+        a clear snapshot of your study day the moment you open the app.
+    </p>
+
+    <h2>Main Dashboard Sections</h2>
+    <p>
+        The dashboard is divided into several panels, each showing important information
+        pulled from <code>localStorage</code> or your Listify cloud account.
+    </p>
+
+    <ul>
+        <li><strong>Today’s Tasks</strong> — shows tasks due today or marked as important.</li>
+        <li><strong>Upcoming Subjects</strong> — highlights subjects scheduled in your timetable.</li>
+        <li><strong>Quick Notes</strong> — a preview of your most recent notes.</li>
+        <li><strong>Timetable Preview</strong> — displays today’s classes at a glance.</li>
+        <li><strong>Shortcuts</strong> — links to Notes, Tasks, Subjects, Timetable, and Listify.</li>
+    </ul>
+
+    <h2>Today’s Tasks</h2>
+    <p>
+        This panel shows tasks that you add. Soon, it will have a feature to add the ability to add due dates to tasks.
+    </p>
+
+    <h2>Upcoming Subjects</h2>
+    <p>
+        StudyHub checks your timetable and displays the subjects for the week.
+        If you have no classes today, the panel will show your next scheduled day instead.
+    </p>
+
+    <h2>Quick Notes Preview</h2>
+    <p>
+        The dashboard shows a small preview of your most recent notes. This helps you
+        quickly return to ongoing work without navigating through menus.
+    </p>
+
+    <h2>Timetable Preview</h2>
+    <p>
+        A simplified version of your Monday–Friday timetable appears here. It highlights
+        the current day and shows your upcoming classes in order.
+    </p>
+
+    <h2>Shortcuts</h2>
+    <p>
+        At the top of every page, you’ll find quick links to all major StudyHub tools:
+    </p>
+
+    <ul>
+        <li>Notes</li>
+        <li>Tasks</li>
+        <li>Subjects</li>
+        <li>Timetable</li>
+        <li>Listify (cloud lists)</li>
+    </ul>
+
+    <h2>Dashboard Refresh</h2>
+    <p>
+        The dashboard does not update automatically whenever you modify tasks, notes, subjects,
+        or timetable entries. Manual refresh is required.
+    </p>
+
+    <h2>Next Steps</h2>
+    <p>
+        Continue to the next page to learn how the Notes system works and how your data
+        is stored locally on your device.
+    </p>
+
+</main>
+
+<script src="../assets/script.js"></script>
+</body>
+</html>

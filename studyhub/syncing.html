@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StudyHub Docs – Syncing Between Devices</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="topbar-inner">
+        <div class="logo">StudyHub Docs</div>
+
+        <nav class="top-icons">
+            <a href="https://github.com/Skyline-Studies/studyhub-web"
+               class="icon-link"
+               title="GitHub"
+               target="_blank"
+               rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="https://www.youtube.com/@JoyCode-Studios"
+               class="icon-link"
+               title="YouTube"
+               target="_blank"
+               rel="noopener noreferrer">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+
+            <a href="#" class="icon-link" id="theme-icon" title="Toggle Theme">🌙</a>
+        </nav>
+    </div>
+</header>
+
+<aside class="sidebar">
+    <nav>
+        <ul class="section">
+            <li class="section-title">StudyHub Docs</li>
+            <li><a href="getting-started.html">2. Getting Started</a></li>
+            <li><a href="dashboard-overview.html">3. Dashboard Overview</a></li>
+            <li><a href="notes.html">4. Notes System</a></li>
+            <li><a href="tasks.html">5. Tasks System</a></li>
+            <li><a href="subjects.html">6. Subjects Manager</a></li>
+            <li><a href="timetable.html">7. Timetable</a></li>
+            <li><a href="listify.html">8. Listify Integration</a></li>
+            <li><a href="storage.html">9. Data Storage</a></li>
+            <li><a href="platforms.html">10. Platform Support</a></li>
+            <li><a href="developer-setup.html">11. Developer Setup</a></li>
+            <li><a href="project-structure.html">12. Project Structure</a></li>
+            <li><a href="contributing.html">13. Contributing</a></li>
+            <li><a href="faq.html">14. FAQ</a></li>
+            <li><a class="active" href="syncing.html">16. Syncing Between Devices</a></li>
+            <li><a href="privacy.html">17. Privacy & Data Handling</a></li>
+        </ul>
+    </nav>
+</aside>
+
+<main class="content">
+
+    <h1>Syncing Between Devices</h1>
+
+    <p>
+        StudyHub is designed to work offline and store data locally on your device.
+        Because of this, the built‑in Notes, Tasks, Subjects, and Timetable systems
+        do not sync automatically between devices.  
+        However, StudyHub offers optional cloud syncing through <strong>Listify</strong>.
+    </p>
+
+    <h2>What Syncs Automatically?</h2>
+    <p>
+        By default: <strong>nothing syncs automatically</strong>.  
+        StudyHub Web uses <code>localStorage</code>, which is:
+    </p>
+
+    <ul>
+        <li>device‑specific</li>
+        <li>browser‑specific</li>
+        <li>cleared when browser data is wiped</li>
+        <li>offline‑friendly</li>
+    </ul>
+
+    <p>
+        This ensures speed and privacy, but it means data stays on one device.
+    </p>
+
+    <h2>Using Listify for Cloud Sync</h2>
+    <p>
+        If you want your notes or lists to sync across devices, use the built‑in
+        <strong>Listify</strong> integration. Listify provides:
+    </p>
+
+    <ul>
+        <li>cloud‑saved notes</li>
+        <li>checklists</li>
+        <li>multi‑device syncing</li>
+        <li>account‑based storage</li>
+    </ul>
+
+    <p>
+        Listify is powered by Cloud Firestore and requires an account.
+    </p>
+
+    <h2>What StudyHub Features Sync?</h2>
+
+    <table border="0" cellpadding="6" cellspacing="0">
+        <tr>
+            <th align="left">Feature</th>
+            <th align="left">Syncs?</th>
+            <th align="left">Where Stored</th>
+        </tr>
+        <tr>
+            <td>Notes (StudyHub)</td>
+            <td>No</td>
+            <td>localStorage</td>
+        </tr>
+        <tr>
+            <td>Tasks</td>
+            <td>No</td>
+            <td>localStorage</td>
+        </tr>
+        <tr>
+            <td>Subjects</td>
+            <td>No</td>
+            <td>localStorage</td>
+        </tr>
+        <tr>
+            <td>Timetable</td>
+            <td>No</td>
+            <td>localStorage</td>
+        </tr>
+        <tr>
+            <td>Listify Notes</td>
+            <td>Yes</td>
+            <td>Cloud Firestore</td>
+        </tr>
+        <tr>
+            <td>Listify Lists</td>
+            <td>Yes</td>
+            <td>Cloud Firestore</td>
+        </tr>
+    </table>
+
+    <h2>Why Doesn’t StudyHub Sync Natively?</h2>
+    <p>
+        StudyHub is designed to be:
+    </p>
+
+    <ul>
+        <li>fast</li>
+        <li>offline‑friendly</li>
+        <li>private</li>
+        <li>lightweight</li>
+    </ul>
+
+    <p>
+        Native syncing would require accounts, servers, and backend infrastructure.
+        Instead, StudyHub keeps things simple and offers cloud sync through Listify
+        for users who want it.
+    </p>
+
+    <h2>Manual Sync Options</h2>
+    <p>
+        If you want to move your StudyHub data manually, you can export and import
+        <code>localStorage</code> data using your browser’s developer tools.
+    </p>
+
+    <p>
+        A built‑in export/import feature may be added in the future.
+    </p>
+
+    <h2>Future Sync Plans</h2>
+    <p>
+        StudyHub Mobile (React Native) may include optional cloud sync for:
+    </p>
+
+    <ul>
+        <li>tasks</li>
+        <li>subjects</li>
+        <li>timetable</li>
+    </ul>
+
+    <p>
+        This will depend on performance, privacy, and user demand.
+    </p>
+
+    <h2>Next Steps</h2>
+    <p>
+        Continue to the next page to learn how StudyHub handles privacy, data storage,
+        and user information.
+    </p>
+
+</main>
+
+<script src="../assets/script.js"></script>
+</body>
+</html>

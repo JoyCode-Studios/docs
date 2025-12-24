@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StudyHub Docs – Tasks System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="topbar-inner">
+        <div class="logo">StudyHub Docs</div>
+
+        <nav class="top-icons">
+            <a href="https://github.com/Skyline-Studies/studyhub-web"
+               class="icon-link"
+               title="GitHub"
+               target="_blank"
+               rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="https://www.youtube.com/@JoyCode-Studios"
+               class="icon-link"
+               title="YouTube"
+               target="_blank"
+               rel="noopener noreferrer">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+
+            <a href="#" class="icon-link" id="theme-icon" title="Toggle Theme">🌙</a>
+        </nav>
+    </div>
+</header>
+
+<aside class="sidebar">
+    <nav>
+        <ul class="section">
+            <li class="section-title">StudyHub Docs</li>
+            <li><a href="getting-started.html">2. Getting Started</a></li>
+            <li><a href="dashboard-overview.html">3. Dashboard Overview</a></li>
+            <li><a href="notes.html">4. Notes System</a></li>
+            <li><a class="active" href="tasks.html">5. Tasks System</a></li>
+            <li><a href="subjects.html">6. Subjects Manager</a></li>
+            <li><a href="timetable.html">7. Timetable</a></li>
+            <li><a href="listify.html">8. Listify Integration</a></li>
+            <li><a href="storage.html">9. Data Storage</a></li>
+            <li><a href="platforms.html">10. Platform Support</a></li>
+            <li><a href="developer-setup.html">11. Developer Setup</a></li>
+            <li><a href="project-structure.html">12. Project Structure</a></li>
+            <li><a href="contributing.html">13. Contributing</a></li>
+            <li><a href="faq.html">14. FAQ</a></li>
+            <li><a href="syncing.html">16. Syncing Between Devices</a></li>
+            <li><a href="privacy.html">17. Privacy & Data Handling</a></li>
+        </ul>
+    </nav>
+</aside>
+
+<main class="content">
+
+    <h1>Tasks System</h1>
+
+    <p>
+        The Tasks system in StudyHub is a simple but powerful to‑do manager designed to help
+        you track homework, assignments, reminders, and daily study goals. All tasks are stored
+        locally on your device using <code>localStorage</code>, making the system fast and fully offline.
+    </p>
+
+    <h2>How Tasks Are Stored</h2>
+    <p>
+        Every task you create is saved instantly. StudyHub uses a dedicated
+        <code>localStorage</code> key to store all tasks as an array of objects.
+    </p>
+
+    <pre><code>studyhub_tasks</code></pre>
+
+    <p>
+        Each task object contains:
+    </p>
+
+    <ul>
+        <li><code>The task</code> — the task name. However, this will save only locally, not to the cloud.</li>
+        <li><code>Listify tasks</code> — tasks in Listify, are not stored locally, but in the cloud. The following features in the list are specific to Listify only.</li>
+        <li><code>Completion status</code> — whether the task is completed or not. This is changed by clicking the checkbox next to the task.</li>
+        <li><code>Delete and modify buttons</code> — the ability to delete, and modify the task.</li>
+    </ul>
+
+    <h2>Adding a Task</h2>
+    <p>
+        To add a task, open the Tasks page and use the input field at the top. You can:
+    </p>
+
+    <ul>
+        <li>enter a task name</li>
+    </ul>
+
+    <p>
+        Once added, the task appears immediately in your task list.
+    </p>
+
+    <h2>Completing Tasks</h2>
+    <p>
+        Clicking the checkbox next to a task marks it as completed. Completed tasks:
+    </p>
+
+    <ul>
+        <li>move to the bottom of the list (depending on your UI layout)</li>
+        <li>remain stored in <code>localStorage</code></li>
+        <li>can be un‑completed at any time</li>
+    </ul>
+
+    <h2>Deleting Tasks</h2>
+    <p>
+        Each task includes a delete button. When you delete a task:
+    </p>
+
+    <ul>
+        <li>it is removed from the list</li>
+        <li>its entry is removed from <code>localStorage</code></li>
+        <li>the action cannot be undone</li>
+    </ul>
+
+    <h2>Important Tasks</h2>
+    <p>
+        Tasks marked as important are highlighted and may appear in the dashboard’s
+        “Today’s Tasks” section. This helps you focus on what matters most.
+    </p>
+
+    <h2>Due Dates</h2>
+    <p>
+        If you set a due date, StudyHub will:
+    </p>
+
+    <ul>
+        <li>display the date next to the task</li>
+        <li>highlight overdue tasks</li>
+        <li>show tasks due today on the dashboard</li>
+    </ul>
+
+    <h2>Offline Support</h2>
+    <p>
+        Because tasks are stored in <code>localStorage</code>, the entire system works offline.
+        You can add, edit, complete, and delete tasks without an internet connection.
+    </p>
+
+    <h2>Limitations</h2>
+    <p>
+        The Tasks system is local‑only:
+    </p>
+
+    <ul>
+        <li>tasks do not sync across devices</li>
+        <li>clearing browser data will remove all tasks</li>
+        <li>tasks are tied to the specific browser and device</li>
+    </ul>
+
+    <h2>Next Steps</h2>
+    <p>
+        Continue to the next page to learn how the Subjects Manager works and how subjects
+        connect to your timetable and dashboard.
+    </p>
+
+</main>
+
+<script src="../assets/script.js"></script>
+</body>
+</html>

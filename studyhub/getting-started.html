@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StudyHub Docs – Getting Started</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="topbar-inner">
+        <div class="logo">StudyHub Docs</div>
+
+        <nav class="top-icons">
+            <a href="https://github.com/Skyline-Studies/studyhub-web"
+               class="icon-link"
+               title="GitHub"
+               target="_blank"
+               rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="https://www.youtube.com/@JoyCode-Studios"
+               class="icon-link"
+               title="YouTube"
+               target="_blank"
+               rel="noopener noreferrer">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+
+            <a href="#" class="icon-link" id="theme-icon" title="Toggle Theme">🌙</a>
+        </nav>
+    </div>
+</header>
+
+<aside class="sidebar">
+    <nav>
+        <ul class="section">
+            <li class="section-title">StudyHub Docs</li>
+            <li><a class="active" href="getting-started.html">2. Getting Started</a></li>
+            <li><a href="dashboard-overview.html">3. Dashboard Overview</a></li>
+            <li><a href="notes.html">4. Notes System</a></li>
+            <li><a href="tasks.html">5. Tasks System</a></li>
+            <li><a href="subjects.html">6. Subjects Manager</a></li>
+            <li><a href="timetable.html">7. Timetable</a></li>
+            <li><a href="listify.html">8. Listify Integration</a></li>
+            <li><a href="storage.html">9. Data Storage</a></li>
+            <li><a href="platforms.html">10. Platform Support</a></li>
+            <li><a href="developer-setup.html">11. Developer Setup</a></li>
+            <li><a href="project-structure.html">12. Project Structure</a></li>
+            <li><a href="contributing.html">13. Contributing</a></li>
+            <li><a href="faq.html">14. FAQ</a></li>
+            <li><a href="syncing.html">16. Syncing Between Devices</a></li>
+            <li><a href="privacy.html">17. Privacy & Data Handling</a></li>
+        </ul>
+    </nav>
+</aside>
+
+<main class="content">
+
+    <h1>Getting Started with StudyHub</h1>
+
+    <p>
+        StudyHub is a lightweight study companion built with React, Vite, and localStorage.
+        It runs entirely in your browser and requires no account to begin. This guide will
+        help you access StudyHub, understand the basic layout, and start using its core tools.
+    </p>
+
+    <h2>Accessing StudyHub</h2>
+    <p>
+        StudyHub Web is available on any modern browser. Simply visit the deployed URL
+        (or run it locally if you're a developer). No installation or login is required.
+    </p>
+
+    <ul>
+        <li>Works on Chrome, Edge, Firefox, Safari</li>
+        <li>No extensions or plugins needed</li>
+        <li>All data is stored locally unless using Listify cloud sync</li>
+    </ul>
+
+    <h2>First-Time Setup</h2>
+    <p>
+        When you open StudyHub for the first time, your dashboard will be empty.
+        StudyHub automatically creates storage areas in <code>localStorage</code> for:
+    </p>
+
+    <ul>
+        <li>notes</li>
+        <li>tasks</li>
+        <li>subjects</li>
+        <li>timetable entries</li>
+    </ul>
+
+    <p>
+        These will remain saved on your device until you clear your browser data.
+    </p>
+
+    <h2>Main Sections</h2>
+    <p>
+        StudyHub is divided into several core tools, each accessible from the dashboard:
+    </p>
+
+    <ul>
+        <li><strong>Notes</strong> — plain text notes saved locally</li>
+        <li><strong>Tasks</strong> — to‑do list with completion tracking</li>
+        <li><strong>Subjects</strong> — organise your classes and topics</li>
+        <li><strong>Timetable</strong> — Monday–Friday schedule planner</li>
+        <li><strong>Listify</strong> — cloud‑synced lists and notes via Firestore</li>
+    </ul>
+
+    <h2>Using StudyHub Offline</h2>
+    <p>
+        Because StudyHub stores everything in <code>localStorage</code>, it works fully offline.
+        You can take notes, manage tasks, and update your timetable without an internet connection.
+    </p>
+
+    <h2>When to Use Listify</h2>
+    <p>
+        If you want your notes or lists to sync across devices, use the built‑in Listify integration.
+        Listify requires an account and stores data in Cloud Firestore.
+    </p>
+
+    <h2>You're Ready to Begin</h2>
+    <p>
+        Once you understand the layout and storage model, you can start using StudyHub immediately.
+        Continue to the next page to learn how the dashboard works.
+    </p>
+
+</main>
+
+<script src="../assets/script.js"></script>
+</body>
+</html>

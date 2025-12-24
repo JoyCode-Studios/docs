@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StudyHub Docs – Data Storage & Persistence</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="topbar-inner">
+        <div class="logo">StudyHub Docs</div>
+
+        <nav class="top-icons">
+            <a href="https://github.com/Skyline-Studies/studyhub-web"
+               class="icon-link"
+               title="GitHub"
+               target="_blank"
+               rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="https://www.youtube.com/@JoyCode-Studios"
+               class="icon-link"
+               title="YouTube"
+               target="_blank"
+               rel="noopener noreferrer">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+
+            <a href="#" class="icon-link" id="theme-icon" title="Toggle Theme">🌙</a>
+        </nav>
+    </div>
+</header>
+
+<aside class="sidebar">
+    <nav>
+        <ul class="section">
+            <li class="section-title">StudyHub Docs</li>
+            <li><a href="getting-started.html">2. Getting Started</a></li>
+            <li><a href="dashboard-overview.html">3. Dashboard Overview</a></li>
+            <li><a href="notes.html">4. Notes System</a></li>
+            <li><a href="tasks.html">5. Tasks System</a></li>
+            <li><a href="subjects.html">6. Subjects Manager</a></li>
+            <li><a href="timetable.html">7. Timetable</a></li>
+            <li><a href="listify.html">8. Listify Integration</a></li>
+            <li><a class="active" href="storage.html">9. Data Storage</a></li>
+            <li><a href="platforms.html">10. Platform Support</a></li>
+            <li><a href="developer-setup.html">11. Developer Setup</a></li>
+            <li><a href="project-structure.html">12. Project Structure</a></li>
+            <li><a href="contributing.html">13. Contributing</a></li>
+            <li><a href="faq.html">14. FAQ</a></li>
+            <li><a href="syncing.html">16. Syncing Between Devices</a></li>
+            <li><a href="privacy.html">17. Privacy & Data Handling</a></li>
+        </ul>
+    </nav>
+</aside>
+
+<main class="content">
+
+    <h1>Data Storage & Persistence</h1>
+
+    <p>
+        StudyHub uses a hybrid storage model that combines fast, offline‑friendly
+        <code>localStorage</code> with optional cloud sync through Listify. This page explains
+        how each system works, what data is stored, and how long it persists.
+    </p>
+
+    <h2>LocalStorage Overview</h2>
+    <p>
+        StudyHub stores most of its data using the browser’s built‑in
+        <code>localStorage</code> API. This allows the app to:
+    </p>
+
+    <ul>
+        <li>work fully offline</li>
+        <li>load instantly</li>
+        <li>store data without an account</li>
+        <li>keep information on your device until manually cleared</li>
+    </ul>
+
+    <p>
+        LocalStorage is device‑specific and browser‑specific. Data does not sync across devices.
+    </p>
+
+    <h2>LocalStorage Keys Used by StudyHub</h2>
+
+    <h3>Notes</h3>
+    <pre><code>studyhub_notes</code></pre>
+
+    <h3>Tasks</h3>
+    <pre><code>studyhub_tasks</code></pre>
+
+    <h3>Subjects</h3>
+    <pre><code>studyhub_subjects</code></pre>
+
+    <h3>Timetable</h3>
+    <pre><code>studyhub_timetable</code></pre>
+
+    <p>
+        Each key stores structured JSON data representing the user’s notes, tasks,
+        subjects, or weekly schedule.
+    </p>
+
+    <h2>What Happens If LocalStorage Is Cleared?</h2>
+    <p>
+        Clearing browser data will remove all StudyHub data stored locally. This includes:
+    </p>
+
+    <ul>
+        <li>all notes</li>
+        <li>all tasks</li>
+        <li>all subjects</li>
+        <li>your entire timetable</li>
+    </ul>
+
+    <p>
+        This action cannot be undone. StudyHub does not back up local data automatically.
+    </p>
+
+    <h2>Cloud Storage (Listify)</h2>
+    <p>
+        StudyHub does not store any cloud data itself. Instead, it integrates with
+        <strong>Listify</strong>, which uses Cloud Firestore to store:
+    </p>
+
+    <ul>
+        <li>cloud‑synced notes</li>
+        <li>lists</li>
+        <li>notes</li>
+    </ul>
+
+    <p>
+        Listify requires an account and handles authentication and syncing independently.
+        StudyHub never stores your Listify login information.
+    </p>
+
+    <h2>Local vs Cloud Comparison</h2>
+
+    <table border="0" cellpadding="6" cellspacing="0">
+        <tr>
+            <th align="left">Feature</th>
+            <th align="left">LocalStorage (StudyHub)</th>
+            <th align="left">Cloud (Listify)</th>
+        </tr>
+        <tr>
+            <td>Works offline</td>
+            <td>Yes</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Syncs across devices</td>
+            <td>No</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Requires account</td>
+            <td>No</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Stores notes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Stores tasks</td>
+            <td>Yes</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Stores timetable</td>
+            <td>Yes</td>
+            <td>No</td>
+        </tr>
+    </table>
+
+    <h2>Why StudyHub Uses LocalStorage</h2>
+    <p>
+        StudyHub prioritises speed, simplicity, and offline access. LocalStorage allows:
+    </p>
+
+    <ul>
+        <li>instant loading</li>
+        <li>no login barriers</li>
+        <li>no network dependency</li>
+        <li>a lightweight, distraction‑free experience</li>
+    </ul>
+
+    <h2>Next Steps</h2>
+    <p>
+        Continue to the next page to learn about platform support and how StudyHub behaves
+        on different devices.
+    </p>
+
+</main>
+
+<script src="../assets/script.js"></script>
+</body>
+</html>

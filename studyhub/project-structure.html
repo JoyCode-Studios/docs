@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StudyHub Docs – Project Structure</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="topbar-inner">
+        <div class="logo">StudyHub Docs</div>
+
+        <nav class="top-icons">
+            <a href="https://github.com/Skyline-Studies/studyhub-web"
+               class="icon-link"
+               title="GitHub"
+               target="_blank"
+               rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="https://www.youtube.com/@JoyCode-Studios"
+               class="icon-link"
+               title="YouTube"
+               target="_blank"
+               rel="noopener noreferrer">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+
+            <a href="#" class="icon-link" id="theme-icon" title="Toggle Theme">🌙</a>
+        </nav>
+    </div>
+</header>
+
+<aside class="sidebar">
+    <nav>
+        <ul class="section">
+            <li class="section-title">StudyHub Docs</li>
+            <li><a href="getting-started.html">2. Getting Started</a></li>
+            <li><a href="dashboard-overview.html">3. Dashboard Overview</a></li>
+            <li><a href="notes.html">4. Notes System</a></li>
+            <li><a href="tasks.html">5. Tasks System</a></li>
+            <li><a href="subjects.html">6. Subjects Manager</a></li>
+            <li><a href="timetable.html">7. Timetable</a></li>
+            <li><a href="listify.html">8. Listify Integration</a></li>
+            <li><a href="storage.html">9. Data Storage</a></li>
+            <li><a href="platforms.html">10. Platform Support</a></li>
+            <li><a href="developer-setup.html">11. Developer Setup</a></li>
+            <li><a class="active" href="project-structure.html">12. Project Structure</a></li>
+            <li><a href="contributing.html">13. Contributing</a></li>
+            <li><a href="faq.html">14. FAQ</a></li>
+            <li><a href="syncing.html">16. Syncing Between Devices</a></li>
+            <li><a href="privacy.html">17. Privacy & Data Handling</a></li>
+        </ul>
+    </nav>
+</aside>
+
+<main class="content">
+
+    <h1>Project Structure</h1>
+
+    <p>
+        StudyHub Web is built using React and Vite, following a clean and modular folder structure.
+        This layout keeps components organised, pages easy to navigate, and logic separated for clarity.
+        Below is an overview of the recommended structure for the <code>studyhub-web</code> repository.
+    </p>
+
+    <h2>Root Structure</h2>
+
+    <pre><code>studyhub-web/
+│
+├── public/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── hooks/
+│   ├── storage/
+│   ├── styles/
+│   ├── App.jsx
+│   ├── main.jsx
+│
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
+</code></pre>
+
+    <h2>Folder Breakdown</h2>
+
+    <h3><code>public/</code></h3>
+    <p>
+        Contains static assets served directly without processing.  
+        Examples:
+    </p>
+    <ul>
+        <li>icons</li>
+        <li>manifest files</li>
+        <li>static images</li>
+    </ul>
+
+    <h3><code>src/</code></h3>
+    <p>
+        The main source folder containing all React code.
+    </p>
+
+    <h3><code>src/components/</code></h3>
+    <p>
+        Reusable UI components shared across pages.  
+        Examples:
+    </p>
+    <ul>
+        <li>Navbar</li>
+        <li>Sidebar</li>
+        <li>NoteCard</li>
+        <li>TaskItem</li>
+        <li>SubjectTag</li>
+    </ul>
+
+    <h3><code>src/pages/</code></h3>
+    <p>
+        Each StudyHub feature has its own page component.  
+        Examples:
+    </p>
+    <ul>
+        <li><code>Dashboard.jsx</code></li>
+        <li><code>Notes.jsx</code></li>
+        <li><code>Tasks.jsx</code></li>
+        <li><code>Subjects.jsx</code></li>
+        <li><code>Timetable.jsx</code></li>
+    </ul>
+
+    <h3><code>src/hooks/</code></h3>
+    <p>
+        Custom React hooks for shared logic.  
+        Examples:
+    </p>
+    <ul>
+        <li><code>useLocalStorage.js</code> — wrapper for reading/writing localStorage</li>
+        <li><code>useTheme.js</code> — theme toggle logic</li>
+    </ul>
+
+    <h3><code>src/storage/</code></h3>
+    <p>
+        Contains helper modules for managing StudyHub’s localStorage keys.  
+        Examples:
+    </p>
+    <ul>
+        <li><code>notes.js</code></li>
+        <li><code>tasks.js</code></li>
+        <li><code>subjects.js</code></li>
+        <li><code>timetable.js</code></li>
+    </ul>
+
+    <h3><code>src/styles/</code></h3>
+    <p>
+        Global and component‑specific CSS files.  
+        Examples:
+    </p>
+    <ul>
+        <li><code>global.css</code></li>
+        <li><code>dashboard.css</code></li>
+        <li><code>notes.css</code></li>
+    </ul>
+
+    <h3><code>App.jsx</code></h3>
+    <p>
+        The root component that defines routing and layout.
+    </p>
+
+    <h3><code>main.jsx</code></h3>
+    <p>
+        Entry point that mounts the React app and initialises global providers.
+    </p>
+
+    <h2>Build & Config Files</h2>
+
+    <h3><code>index.html</code></h3>
+    <p>
+        The base HTML file used by Vite to inject the React app.
+    </p>
+
+    <h3><code>vite.config.js</code></h3>
+    <p>
+        Vite configuration file for plugins, aliases, and build settings.
+    </p>
+
+    <h3><code>package.json</code></h3>
+    <p>
+        Contains dependencies, scripts, and project metadata.
+    </p>
+
+    <h2>Why This Structure?</h2>
+    <p>
+        This layout keeps StudyHub:
+    </p>
+
+    <ul>
+        <li>modular</li>
+        <li>easy to maintain</li>
+        <li>scalable for future features</li>
+        <li>consistent with modern React best practices</li>
+    </ul>
+
+    <h2>Next Steps</h2>
+    <p>
+        Continue to the next page to learn how to contribute to StudyHub and follow the project’s guidelines.
+    </p>
+
+</main>
+
+<script src="../assets/script.js"></script>
+</body>
+</html>

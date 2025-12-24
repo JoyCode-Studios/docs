@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StudyHub Docs – FAQ & Troubleshooting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="topbar-inner">
+        <div class="logo">StudyHub Docs</div>
+
+        <nav class="top-icons">
+            <a href="https://github.com/Skyline-Studies/studyhub-web"
+               class="icon-link"
+               title="GitHub"
+               target="_blank"
+               rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="https://www.youtube.com/@JoyCode-Studios"
+               class="icon-link"
+               title="YouTube"
+               target="_blank"
+               rel="noopener noreferrer">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+
+            <a href="#" class="icon-link" id="theme-icon" title="Toggle Theme">🌙</a>
+        </nav>
+    </div>
+</header>
+
+<aside class="sidebar">
+    <nav>
+        <ul class="section">
+            <li class="section-title">StudyHub Docs</li>
+            <li><a href="getting-started.html">2. Getting Started</a></li>
+            <li><a href="dashboard-overview.html">3. Dashboard Overview</a></li>
+            <li><a href="notes.html">4. Notes System</a></li>
+            <li><a href="tasks.html">5. Tasks System</a></li>
+            <li><a href="subjects.html">6. Subjects Manager</a></li>
+            <li><a href="timetable.html">7. Timetable</a></li>
+            <li><a href="listify.html">8. Listify Integration</a></li>
+            <li><a href="storage.html">9. Data Storage</a></li>
+            <li><a href="platforms.html">10. Platform Support</a></li>
+            <li><a href="developer-setup.html">11. Developer Setup</a></li>
+            <li><a href="project-structure.html">12. Project Structure</a></li>
+            <li><a href="contributing.html">13. Contributing</a></li>
+            <li><a class="active" href="faq.html">14. FAQ</a></li>
+            <li><a href="syncing.html">16. Syncing Between Devices</a></li>
+            <li><a href="privacy.html">17. Privacy & Data Handling</a></li>
+        </ul>
+    </nav>
+</aside>
+
+<main class="content">
+
+    <h1>FAQ & Troubleshooting</h1>
+
+    <p>
+        This page answers common questions about StudyHub and provides solutions to
+        frequent issues. If something isn’t working as expected, you’ll likely find
+        the fix here.
+    </p>
+
+    <h2>General Questions</h2>
+
+    <h3>Does StudyHub require an account?</h3>
+    <p>
+        No. StudyHub Web uses <code>localStorage</code> and works fully offline without
+        requiring an account. Only Listify (cloud sync) requires login.
+    </p>
+
+    <h3>Does StudyHub sync across devices?</h3>
+    <p>
+        StudyHub’s built‑in tools (Notes, Tasks, Subjects, Timetable) do not sync.
+        They are stored locally on each device.  
+        For cloud sync, use Listify.
+    </p>
+
+    <h3>Is StudyHub free?</h3>
+    <p>
+        Yes. StudyHub Web is completely free and open‑source under the MIT License.
+        StudyHub Mobile will be open‑source under Apache 2.0.
+    </p>
+
+    <h3>Does StudyHub work offline?</h3>
+    <p>
+        Yes. All core features work offline because they use <code>localStorage</code>.
+        Only Listify requires internet access.
+    </p>
+
+    <h2>Troubleshooting</h2>
+
+    <h3>My notes, tasks, or subjects disappeared</h3>
+    <p>
+        This usually happens when:
+    </p>
+
+    <ul>
+        <li>browser data was cleared</li>
+        <li>you switched browsers or devices</li>
+        <li>private browsing mode was used</li>
+    </ul>
+
+    <p>
+        StudyHub stores everything locally, so clearing data removes it permanently.
+    </p>
+
+    <h3>The timetable isn’t saving my classes</h3>
+    <p>
+        Make sure your browser allows <code>localStorage</code>.  
+        Some privacy modes block it.
+    </p>
+
+    <h3>StudyHub won’t load</h3>
+    <p>
+        Try the following:
+    </p>
+
+    <ul>
+        <li>refresh the page</li>
+        <li>disable browser extensions temporarily</li>
+        <li>try a different browser</li>
+        <li>check the console for errors (F12 → Console)</li>
+    </ul>
+
+    <h3>Listify won’t sync</h3>
+    <p>
+        Listify requires:
+    </p>
+
+    <ul>
+        <li>an internet connection</li>
+        <li>a valid account</li>
+        <li>Firestore access enabled</li>
+    </ul>
+
+    <p>
+        If syncing fails, try logging out and back in.
+    </p>
+
+    <h3>Why does StudyHub look different on mobile?</h3>
+    <p>
+        The layout adapts to smaller screens.  
+        A dedicated mobile app (React Native) is planned for a smoother experience.
+    </p>
+
+    <h2>Technical Questions</h2>
+
+    <h3>Where is my data stored?</h3>
+    <p>
+        All StudyHub data is stored in <code>localStorage</code> under keys like:
+    </p>
+
+    <pre><code>studyhub_notes
+studyhub_tasks
+studyhub_subjects
+studyhub_timetable</code></pre>
+
+    <h3>Can I back up my data?</h3>
+    <p>
+        Yes — you can manually export your <code>localStorage</code> data using your browser’s
+        developer tools. A built‑in export feature may be added in the future.
+    </p>
+
+    <h3>Can I contribute to the project?</h3>
+    <p>
+        Absolutely. See the previous page:  
+        <strong>13. Contributing</strong>
+    </p>
+
+    <h2>Still Need Help?</h2>
+    <p>
+        If you encounter an issue not listed here, you can open an issue on GitHub:
+    </p>
+
+    <ul>
+        <li><a href="https://github.com/Skyline-Studies/studyhub-web/issues" target="_blank">StudyHub Web Issues</a></li>
+        <li><a href="https://github.com/Skyline-Studies/studyhub-mobile/issues" target="_blank">StudyHub Mobile Issues</a></li>
+    </ul>
+
+</main>
+
+<script src="../assets/script.js"></script>
+</body>
+</html>
