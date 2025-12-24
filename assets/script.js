@@ -3,15 +3,20 @@ const savedTheme = localStorage.getItem("joycode-theme");
 const themeIcon = document.getElementById("theme-icon");
 const themeStylesheet = document.getElementById("themeStylesheet");
 
+// Full website URLs for GitHub Pages
+const LIGHT = "https://joycode-studios.github.io/docs/assets/style.css";
+const DARK  = "https://joycode-studios.github.io/docs/assets/dark.css";
+
 // ------------------------------
 // Apply saved or preferred theme
 // ------------------------------
 let theme = savedTheme || (prefersDark ? "dark" : "light");
 
 if (theme === "dark") {
-    themeStylesheet.href = themeStylesheet.href.replace("style.css", "dark.css");
+    themeStylesheet.href = DARK;
     themeIcon.textContent = "☀️";
 } else {
+    themeStylesheet.href = LIGHT;
     themeIcon.textContent = "🌙";
 }
 
@@ -21,14 +26,14 @@ localStorage.setItem("joycode-theme", theme);
 // Toggle theme
 // ------------------------------
 function toggleTheme() {
-    const isDark = themeStylesheet.href.includes("dark.css");
+    const isDark = themeStylesheet.href === DARK;
 
     if (isDark) {
-        themeStylesheet.href = themeStylesheet.href.replace("dark.css", "style.css");
+        themeStylesheet.href = LIGHT;
         themeIcon.textContent = "🌙";
         localStorage.setItem("joycode-theme", "light");
     } else {
-        themeStylesheet.href = themeStylesheet.href.replace("style.css", "dark.css");
+        themeStylesheet.href = DARK;
         themeIcon.textContent = "☀️";
         localStorage.setItem("joycode-theme", "dark");
     }
