@@ -5,54 +5,71 @@
     <title>JoyCode Documentation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-<div class="sidebar">
-    <h1>JoyCode Docs</h1>
-    <ul>
-        <li><a href="docs/syntax.html">Syntax</a></li>
-        <li><a href="docs/tags.html">Tags</a></li>
-        <li><a href="docs/attributes.html">Attributes</a></li>
-        <li><a href="docs/events.html">Events</a></li>
-        <li><a href="docs/parsing.html">Parsing Rules</a></li>
-        <li><a href="docs/runtime-contract.html">Runtime Contract</a></li>
-        <li><a href="docs/roadmap.html">Roadmap</a></li>
-    </ul>
+<!-- Top Navigation -->
+<header class="topbar">
+    <div class="topbar-inner">
+        <div class="logo">JoyCode Docs</div>
 
-    <button id="theme-toggle" class="theme-toggle">Toggle Theme</button>
-</div>
+        <nav class="top-icons">
+            <a href="#" class="icon-link" title="GitHub">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="#" class="icon-link" title="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="#" class="icon-link" id="theme-icon" title="Toggle Theme">
+                🌙
+            </a>
+        </nav>
+    </div>
+</header>
 
-<div class="main">
-    <h2>Welcome to JoyCode Documentation</h2>
+<!-- Sidebar -->
+<aside class="sidebar">
+    <nav>
+        <ul>
+            <li><a href="docs/syntax.html">Syntax</a></li>
+            <li><a href="docs/tags.html">Tags</a></li>
+            <li><a href="docs/attributes.html">Attributes</a></li>
+            <li><a href="docs/events.html">Events</a></li>
+            <li><a href="docs/parsing.html">Parsing Rules</a></li>
+            <li><a href="docs/runtime-contract.html">Runtime Contract</a></li>
+            <li><a href="docs/roadmap.html">Roadmap</a></li>
+        </ul>
+    </nav>
+</aside>
+
+<!-- Main Content -->
+<main class="content">
+    <h1>Welcome to JoyCode Documentation</h1>
     <p>
-        This documentation system provides a unified, open‑source foundation for all JoyCode Studios projects.
-        It includes a consistent layout, theming system, navigation structure, and reusable components designed
-        to keep documentation clean, readable, and developer‑friendly.
+        JoyCode Documentation is a universal, open‑source documentation system used across the JoyCode Studios
+        ecosystem. It provides a clean, modern, React.dev‑inspired layout with a floating sidebar, soft spacing,
+        and a polished reading experience.
     </p>
 
-    <h3>What is this?</h3>
-    <p>
-        JoyCode Documentation is a universal docs template used across the JoyCode ecosystem. Whether you're
-        documenting a language, runtime, library, or internal standard, this layout gives you a polished,
-        professional starting point.
-    </p>
-
-    <h3>Features</h3>
+    <h2>Features</h2>
     <ul>
-        <li>Lightweight, dependency‑free layout</li>
-        <li>Dark mode support</li>
-        <li>Clean sidebar navigation</li>
-        <li>Readable typography</li>
+        <li>React.dev‑style layout</li>
+        <li>Floating, independently scrolling sidebar</li>
+        <li>Top‑right icon bar with GitHub, YouTube, and theme toggle</li>
+        <li>Light/dark theme with emoji toggle</li>
+        <li>Readable, centered content column</li>
         <li>MIT‑licensed and fully open‑source</li>
     </ul>
 
-    <h3>Get Started</h3>
+    <h2>Get Started</h2>
     <p>
-        Use the sidebar to explore the documentation sections.  
-        To create your own docs, copy this template into your project and customise it as needed.
+        Use the sidebar to explore the documentation.  
+        To create your own docs, copy this template and customise it as needed.
     </p>
-</div>
+</main>
 
 <script src="assets/script.js"></script>
 </body>
