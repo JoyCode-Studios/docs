@@ -25,6 +25,10 @@ html, body {
     --topbar-bg: #ffffff;
     --link: #3a5ccc;
     --link-hover: #2a4bb0;
+
+    /* NEW: Active link colours */
+    --active-bg: #e8edff;
+    --active-text: #1a2f6b;
 }
 
 .dark {
@@ -35,6 +39,10 @@ html, body {
     --topbar-bg: #16181d;
     --link: #7aa2ff;
     --link-hover: #a8c3ff;
+
+    /* NEW: Dark mode active colours */
+    --active-bg: #1d2333;
+    --active-text: #c7d7ff;
 }
 
 /* ------------------------------
@@ -106,10 +114,25 @@ html, body {
     text-decoration: none;
     color: var(--link);
     font-weight: 600;
+
+    /* NEW: padding + radius for active highlight */
+    padding: 0.35rem 0.5rem;
+    border-radius: 6px;
+
+    display: block;
+    transition: background 0.15s ease, color 0.15s ease;
 }
 
 .sidebar a:hover {
     color: var(--link-hover);
+}
+
+/* ------------------------------
+   ACTIVE CLASS (React.dev style)
+------------------------------ */
+.sidebar a.active {
+    background: var(--active-bg);
+    color: var(--active-text);
 }
 
 /* ------------------------------
