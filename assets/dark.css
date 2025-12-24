@@ -1,0 +1,146 @@
+/* ------------------------------
+   Reset
+------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: system-ui, sans-serif;
+    background: #0f1115;
+    color: #e6e6e6;
+    min-height: 100%;
+}
+
+/* ------------------------------
+   Top Navigation
+------------------------------ */
+.topbar {
+    width: 100%;
+    background: #16181d;
+    border-bottom: 1px solid #2a2d33;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.topbar-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.8rem 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.top-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.icon-link {
+    font-size: 1.25rem;
+    color: #e6e6e6;
+    text-decoration: none;
+    transition: opacity 0.15s ease;
+}
+
+.icon-link:hover {
+    opacity: 0.7;
+}
+
+/* ------------------------------
+   Sidebar
+------------------------------ */
+.sidebar {
+    width: 240px;
+    position: fixed;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+    background: #16181d;
+    border-right: 1px solid #2a2d33;
+    padding: 1.5rem 1rem;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin-bottom: 0.9rem;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #7aa2ff;
+    font-weight: 600;
+    padding: 0.35rem 0.5rem;
+    border-radius: 6px;
+    display: block;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.sidebar a:hover {
+    color: #a8c3ff;
+}
+
+/* ------------------------------
+   ACTIVE CLASS
+------------------------------ */
+.sidebar a.active {
+    background: #1d2333;
+    color: #c7d7ff;
+}
+
+/* ------------------------------
+   Main Content
+------------------------------ */
+.content {
+    margin-left: 240px;
+    padding: 6rem 2rem 3rem;
+    max-width: 900px;
+    background: #0f1115;
+}
+
+.content h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.content h2 {
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+.content p, .content li {
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.section {
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #e6e6e6;
+    opacity: 0.6;
+    margin-bottom: 0.6rem;
+}
+
+main, section, article {
+    background: #0f1115;
+}
