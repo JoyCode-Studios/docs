@@ -18,10 +18,10 @@ if (savedTheme) {
 
 // Apply initial theme
 if (theme === "dark") {
-    themeStylesheet.href = "../assets/dark.css";
+    themeStylesheet.href = "dark.css";
     themeIcon.textContent = "☀️";
 } else {
-    themeStylesheet.href = "../assets/style.css";
+    themeStylesheet.href = "style.css";
     themeIcon.textContent = "🌙";
 }
 
