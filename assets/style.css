@@ -10,42 +10,9 @@
 html, body {
     height: 100%;
     font-family: system-ui, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-
-    /* FIX: ensure full-page dark mode coverage */
+    background: #fafafa;
+    color: #1a1a1a;
     min-height: 100%;
-}
-
-/* ------------------------------
-   Theme Variables
------------------------------- */
-:root {
-    --bg: #fafafa;
-    --text: #1a1a1a;
-    --sidebar-bg: #ffffff;
-    --sidebar-border: #e5e5e5;
-    --topbar-bg: #ffffff;
-    --link: #3a5ccc;
-    --link-hover: #2a4bb0;
-
-    /* NEW: Active link colours */
-    --active-bg: #e8edff;
-    --active-text: #1a2f6b;
-}
-
-.dark {
-    --bg: #0f1115;
-    --text: #e6e6e6;
-    --sidebar-bg: #16181d;
-    --sidebar-border: #2a2d33;
-    --topbar-bg: #16181d;
-    --link: #7aa2ff;
-    --link-hover: #a8c3ff;
-
-    /* NEW: Dark mode active colours */
-    --active-bg: #1d2333;
-    --active-text: #c7d7ff;
 }
 
 /* ------------------------------
@@ -53,8 +20,8 @@ html, body {
 ------------------------------ */
 .topbar {
     width: 100%;
-    background: var(--topbar-bg);
-    border-bottom: 1px solid var(--sidebar-border);
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
     position: fixed;
     top: 0;
     z-index: 1000;
@@ -81,7 +48,7 @@ html, body {
 
 .icon-link {
     font-size: 1.25rem;
-    color: var(--text);
+    color: #1a1a1a;
     text-decoration: none;
     transition: opacity 0.15s ease;
 }
@@ -100,8 +67,8 @@ html, body {
     bottom: 0;
     left: 0;
     overflow-y: auto;
-    background: var(--sidebar-bg);
-    border-right: 1px solid var(--sidebar-border);
+    background: #ffffff;
+    border-right: 1px solid #e5e5e5;
     padding: 1.5rem 1rem;
 }
 
@@ -115,27 +82,24 @@ html, body {
 
 .sidebar a {
     text-decoration: none;
-    color: var(--link);
+    color: #3a5ccc;
     font-weight: 600;
-
-    /* NEW: padding + radius for active highlight */
     padding: 0.35rem 0.5rem;
     border-radius: 6px;
-
     display: block;
     transition: background 0.15s ease, color 0.15s ease;
 }
 
 .sidebar a:hover {
-    color: var(--link-hover);
+    color: #2a4bb0;
 }
 
 /* ------------------------------
-   ACTIVE CLASS (React.dev style)
+   ACTIVE CLASS
 ------------------------------ */
 .sidebar a.active {
-    background: var(--active-bg);
-    color: var(--active-text);
+    background: #e8edff;
+    color: #1a2f6b;
 }
 
 /* ------------------------------
@@ -145,9 +109,7 @@ html, body {
     margin-left: 240px;
     padding: 6rem 2rem 3rem;
     max-width: 900px;
-
-    /* FIX: ensure content background respects theme */
-    background: var(--bg);
+    background: #fafafa;
 }
 
 .content h1 {
@@ -174,11 +136,11 @@ html, body {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: var(--text);
+    color: #1a1a1a;
     opacity: 0.6;
     margin-bottom: 0.6rem;
 }
 
 main, section, article {
-    background: var(--bg);
+    background: #fafafa;
 }
