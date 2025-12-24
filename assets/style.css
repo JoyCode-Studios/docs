@@ -12,6 +12,9 @@ html, body {
     font-family: system-ui, sans-serif;
     background: var(--bg);
     color: var(--text);
+
+    /* FIX: ensure full-page dark mode coverage */
+    min-height: 100%;
 }
 
 /* ------------------------------
@@ -142,6 +145,9 @@ html, body {
     margin-left: 240px;
     padding: 6rem 2rem 3rem;
     max-width: 900px;
+
+    /* FIX: ensure content background respects theme */
+    background: var(--bg);
 }
 
 .content h1 {
@@ -171,4 +177,8 @@ html, body {
     color: var(--text);
     opacity: 0.6;
     margin-bottom: 0.6rem;
+}
+
+main, section, article {
+    background: var(--bg);
 }
