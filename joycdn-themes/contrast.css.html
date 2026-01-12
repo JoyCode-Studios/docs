@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JoyCDN Docs - contrast.css</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link id="themeStylesheet" rel="stylesheet" href="https://joycode-studios.github.io/docs/assets/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="logo">JoyCDN Docs</div>
+    <nav class="top-icons">
+      <a href="https://github.com/JoyCode-Studios/docs" class="icon-link" title="GitHub" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="https://www.youtube.com/@JoyCode-Studios" class="icon-link" title="YouTube" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+      <a href="#" class="icon-link" id="theme-icon" title="Toggle Theme">🌙</a>
+    </nav>
+  </div>
+</header>
+
+<aside class="sidebar">
+  <nav>
+    <ul class="section">
+      <li class="section-title">JoyCDN Docs</li>
+      <li><a href="getting-started.html">1. Getting Started</a></li>
+      <li><a href="joy.css.html">2. joy.css</a></li>
+      <li><a href="dark.css.html">3. dark.css</a></li>
+      <li><a href="light.css.html">4. light.css</a></li>
+      <li><a class="active" href="contrast.css.html">5. contrast.css</a></li>
+      <li><a href="retro.css.html">6. retro.css</a></li>
+      <li><a href="minimal.css.html">7. minimal.css</a></li>
+    </ul>
+    <ul class="section">
+      <li class="section-title">JoyCDN Widgets</li>
+      <li><a href="live-clock.html">8. Live Clock</a></li>
+      <li><a href="new-year-timer.html">9. New Year Timer</a></li>
+    </ul>
+  </nav>
+</aside>
+
+<main class="content">
+  <h1>5. contrast.css</h1>
+
+  <p>
+    <strong>contrast.css</strong> is JoyCDN’s accessibility-first theme, built for users who need maximum clarity, bold visuals, and zero ambiguity. It removes all subtlety — no shadows, no gradients, no rounded corners — just pure contrast and hard edges.
+  </p>
+
+  <h2>📦 How to Use</h2>
+  <p>Include this in your HTML to apply the theme:</p>
+  <pre><code>&lt;link rel="stylesheet" href="https://cdn.joycode.co.uk/themes/contrast.css"&gt;</code></pre>
+
+  <h2>🎨 Visual System</h2>
+  <ul>
+    <li><strong>Font:</strong> Segoe UI, sans-serif</li>
+    <li><strong>Background:</strong> <code>#ffffff</code> (white)</li>
+    <li><strong>Text:</strong> <code>#000000</code> (black)</li>
+    <li><strong>Accent:</strong> <code>#0000ff</code> (blue), hover: <code>#000099</code></li>
+    <li><strong>Card background:</strong> <code>#ffffff</code></li>
+    <li><strong>Border:</strong> <code>#000000</code>, 2px solid</li>
+    <li><strong>Radius:</strong> 0 (no rounding)</li>
+    <li><strong>Shadow:</strong> none</li>
+  </ul>
+
+  <h2>🧱 Typography</h2>
+  <p>
+    All headings <code>h1</code>–<code>h5</code> are <strong>bold</strong>, <strong>underlined</strong>, and use the same black text color as body copy. Font size is increased and line height is 1.8 for readability.
+  </p>
+
+  <h2>🔘 Buttons</h2>
+  <p>
+    Buttons are bold, rectangular, and unmistakable. They use a blue background with white text, a thick black border, and no rounding. On hover, the blue darkens to <code>#000099</code>.
+  </p>
+  <pre><code>&lt;button class="button"&gt;High Contrast Button&lt;/button&gt;</code></pre>
+
+  <h2>📦 Cards</h2>
+  <p>
+    Cards are white with a 2px black border, no shadow, and no radius. They’re designed to be unmistakably separate from the background.
+  </p>
+
+  <h2>📝 Forms</h2>
+  <p>
+    Inputs, selects, and textareas are styled with:
+  </p>
+  <ul>
+    <li>Black 2px borders</li>
+    <li>White background, black text</li>
+    <li>Focus state: <strong>3px solid blue outline</strong></li>
+    <li>No border radius</li>
+  </ul>
+
+  <h2>📢 Alerts</h2>
+  <p>Each alert type uses strong background and text colors:</p>
+  <ul>
+    <li><code>.alert-info</code>: <strong>#e6f0ff</strong> background, <strong>#000066</strong> text</li>
+    <li><code>.alert-success</code>: <strong>#e6ffe6</strong> background, <strong>#006600</strong> text</li>
+    <li><code>.alert-error</code>: <strong>#ffe6e6</strong> background, <strong>#990000</strong> text</li>
+  </ul>
+
+  <h2>📐 Layout Helpers</h2>
+  <p>Includes all standard JoyCDN utilities:</p>
+  <ul>
+    <li><code>.flex</code>, <code>.grid</code>, <code>.center</code>, <code>.hidden</code></li>
+    <li>All spacing and alignment helpers are preserved</li>
+  </ul>
+
+  <h2>🧪 Best Practices</h2>
+  <ul>
+    <li>Use semantic HTML and label all inputs clearly</li>
+    <li>Use <code>.button</code>, <code>.card</code>, and <code>.alert</code> classes for consistent accessibility</li>
+    <li>Test your site with screen readers and keyboard navigation</li>
+    <li>To apply this theme, manually update your <code>&lt;link&gt;</code> tag</li>
+  </ul>
+
+  <h2>📜 License</h2>
+  <p>
+    JoyCDN is currently closed-source. Redistribution or modification of the CSS files is not permitted without permission.
+  </p>
+</main>
+
+<script src="../assets/script.js"></script>
+</body>
+</html>

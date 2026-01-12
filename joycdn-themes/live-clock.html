@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JoyCDN Docs - live-clock</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link id="themeStylesheet" rel="stylesheet" href="https://joycode-studios.github.io/docs/assets/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="logo">JoyCDN Docs</div>
+    <nav class="top-icons">
+      <a href="https://github.com/JoyCode-Studios/docs" class="icon-link" title="GitHub" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="https://www.youtube.com/@JoyCode-Studios" class="icon-link" title="YouTube" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+      <a href="#" class="icon-link" id="theme-icon" title="Toggle Theme">🌙</a>
+    </nav>
+  </div>
+</header>
+
+<aside class="sidebar">
+  <nav>
+    <ul class="section">
+      <li class="section-title">JoyCDN Docs</li>
+      <li><a href="getting-started.html">1. Getting Started</a></li>
+      <li><a href="joy.css.html">2. joy.css</a></li>
+      <li><a href="dark.css.html">3. dark.css</a></li>
+      <li><a href="light.css.html">4. light.css</a></li>
+      <li><a href="contrast.css.html">5. contrast.css</a></li>
+      <li><a href="retro.css.html">6. retro.css</a></li>
+      <li><a href="minimal.css.html">7. minimal.css</a></li>
+    </ul>
+    <ul class="section">
+      <li class="section-title">JoyCDN Widgets</li>
+      <li><a class="active" href="live-clock.html">8. Live Clock</a></li>
+      <li><a href="new-year-timer.html">9. New Year Timer</a></li>
+    </ul>
+  </nav>
+</aside>
+
+<main class="content">
+  <h1>8. Live Clock</h1>
+
+  <p>
+    The <strong>Live Clock</strong> widget is a lightweight, embeddable component that displays the current time in real-time. It’s perfect for dashboards, landing pages, or any site that wants to show the time without writing JavaScript.
+  </p>
+
+  <h2>📦 How to Use</h2>
+  <p>Embed the clock anywhere in your HTML using an <code>&lt;iframe&gt;</code>:</p>
+  <pre><code>&lt;iframe src="https://cdn.joycode.co.uk/clock/live-clock.html"
+        style="border: none; width: 800px; height: 500px;"&gt;&lt;/iframe&gt;</code></pre>
+  <p>You can also adjust the size of the clock by changing the <code>width</code> and <code>height</code> attributes in the iframe tag.</p>
+
+  <h2>💎 What it looks like.</h2>
+  <p>This is what this widget looks like:</p>
+    <iframe src="https://cdn.joycode.co.uk/clock/live-clock.html"
+            style="border: none; width: 800px; height: 500px;"></iframe>  
+
+  <h2>🕒 Features</h2>
+  <ul>
+    <li>Displays current time in 24-hour format</li>
+    <li>Updates every second</li>
+    <li>Styled with <code>joy.css</code> for clean integration</li>
+    <li>No JavaScript required on your end</li>
+    <li>Fully responsive and iframe-safe</li>
+  </ul>
+
+  <h2>🎨 Styling</h2>
+  <p>
+    The clock uses a minimal layout with centered text, a soft background, and a monospaced font. You can override its appearance by wrapping the iframe in a styled container or using <code>transform</code> and <code>scale</code> to resize it.
+  </p>
+
+  <h2>📐 Sizing Tips</h2>
+  <ul>
+    <li>Default size: <code>800px × 500px</code></li>
+    <li>To scale up, increase <code>width</code> and <code>height</code> proportionally</li>
+    <li>Use <code>max-width: 100%</code> for responsive layouts</li>
+  </ul>
+
+  <h2>🧪 Best Practices</h2>
+  <ul>
+    <li>Use only one clock per page to avoid redundancy</li>
+    <li>Place it in headers, footers, or sidebars for visibility</li>
+    <li>Test on mobile to ensure it scales properly</li>
+  </ul>
+
+  <h2>📜 License</h2>
+  <p>
+    JoyCDN is currently closed-source. Redistribution or modification of the widget is not permitted without permission.
+  </p>
+</main>
+
+<script src="../assets/script.js"></script>
+</body>
+</html>

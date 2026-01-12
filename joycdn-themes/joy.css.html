@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JoyCDN Docs - joy.css</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link id="themeStylesheet" rel="stylesheet" href="https://joycode-studios.github.io/docs/assets/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="logo">JoyCDN Docs</div>
+    <nav class="top-icons">
+      <a href="https://github.com/JoyCode-Studios/docs" class="icon-link" title="GitHub" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="https://www.youtube.com/@JoyCode-Studios" class="icon-link" title="YouTube" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+      <a href="#" class="icon-link" id="theme-icon" title="Toggle Theme">🌙</a>
+    </nav>
+  </div>
+</header>
+
+<aside class="sidebar">
+  <nav>
+    <ul class="section">
+      <li class="section-title">JoyCDN Docs</li>
+      <li><a href="getting-started.html">1. Getting Started</a></li>
+      <li><a class="active" href="joy.css.html">2. joy.css</a></li>
+      <li><a href="dark.css.html">3. dark.css</a></li>
+      <li><a href="light.css.html">4. light.css</a></li>
+      <li><a href="contrast.css.html">5. contrast.css</a></li>
+      <li><a href="retro.css.html">6. retro.css</a></li>
+      <li><a href="minimal.css.html">7. minimal.css</a></li>
+    </ul>
+    <ul class="section">
+      <li class="section-title">JoyCDN Widgets</li>
+      <li><a href="live-clock.html">8. Live Clock</a></li>
+      <li><a href="new-year-timer.html">9. New Year Timer</a></li>
+    </ul>
+  </nav>
+</aside>
+
+<main class="content">
+  <h1>2. joy.css</h1>
+
+  <p>
+    <strong>joy.css</strong> is the default theme of the JoyCDN framework — a clean, modern stylesheet designed to provide a joyful baseline for web interfaces. It’s used across JoyCode Studios tools and documentation, and reflects our values of clarity, friendliness, and minimalism.
+  </p>
+
+  <h2>📦 How to Use</h2>
+  <p>Include this in your HTML <code>&lt;head&gt;</code> to apply the theme:</p>
+  <pre><code>&lt;link rel="stylesheet" href="https://cdn.joycode.co.uk/themes/joy.css"&gt;</code></pre>
+
+  <h2>🎨 Theme Variables</h2>
+  <p>joy.css uses CSS custom properties to define its visual system:</p>
+  <ul>
+    <li><code>--font-body</code>: 'Segoe UI', sans-serif</li>
+    <li><code>--font-heading</code>: 'Segoe UI', sans-serif</li>
+    <li><code>--color-bg</code>: #f9f9f9</li>
+    <li><code>--color-text</code>: #222</li>
+    <li><code>--color-accent</code>: #3182ce</li>
+    <li><code>--color-accent-hover</code>: #2b6cb0</li>
+    <li><code>--color-card</code>: #ffffff</li>
+    <li><code>--color-border</code>: #e2e8f0</li>
+    <li><code>--radius</code>: 8px</li>
+    <li><code>--shadow</code>: 0 2px 4px rgba(0, 0, 0, 0.05)</li>
+  </ul>
+
+  <h2>🧱 Base Styles</h2>
+  <p>
+    The universal selector resets margin and padding, and applies <code>box-sizing: border-box</code>. The <code>body</code> uses the base font, background color, and a comfortable line height with 2rem padding.
+  </p>
+
+  <h2>🧾 Typography</h2>
+  <p>
+    Headings <code>h1</code> through <code>h5</code> use the heading font, bold weight, and a darkened color (#1a202c). They include bottom margin for spacing.
+  </p>
+
+  <h2>🔘 Buttons</h2>
+  <p>
+    The <code>.button</code> class styles buttons with the accent color, white text, padding, rounded corners, and a hover transition.
+  </p>
+  <pre><code>&lt;button class="button"&gt;Click Me&lt;/button&gt;</code></pre>
+
+  <h2>📦 Cards</h2>
+  <p>
+    The <code>.card</code> class creates a padded, bordered container with a white background and subtle shadow. Ideal for UI panels, previews, or grouped content.
+  </p>
+
+  <h2>📝 Forms</h2>
+  <p>
+    Inputs, textareas, and selects are styled with padding, border radius, and a soft border. On focus, they highlight with the accent color and a subtle glow.
+  </p>
+
+  <h2>📢 Alerts</h2>
+  <p>
+    joy.css includes three alert types:
+  </p>
+  <ul>
+    <li><code>.alert-info</code>: Light blue background, dark blue text</li>
+    <li><code>.alert-success</code>: Pale green background, deep green text</li>
+    <li><code>.alert-error</code>: Soft red background, crimson text</li>
+  </ul>
+
+  <h2>📐 Layout Helpers</h2>
+  <ul>
+    <li><code>.flex</code>: Flex container with gap</li>
+    <li><code>.grid</code>: Grid container with gap</li>
+    <li><code>.center</code>: Flexbox centering (horizontal + vertical)</li>
+    <li><code>.hidden</code>: Hides the element completely</li>
+  </ul>
+
+  <h2>🧪 Best Practices</h2>
+  <ul>
+    <li>Use semantic HTML — joy.css is built to reward clean markup</li>
+    <li>Pair with system fonts for performance and accessibility</li>
+    <li>Use <code>.card</code> and <code>.button</code> for consistent UI</li>
+    <li>To switch themes, manually change the <code>href</code> in your <code>&lt;link&gt;</code> tag</li>
+  </ul>
+
+  <h2>📜 License</h2>
+  <p>
+    JoyCDN is currently closed-source. Redistribution or modification of the CSS files is not permitted without permission.
+  </p>
+</main>
+
+<script src="../assets/script.js"></script>
+</body>
+</html>

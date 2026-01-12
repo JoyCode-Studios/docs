@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JoyCDN Docs - retro.css</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link id="themeStylesheet" rel="stylesheet" href="https://joycode-studios.github.io/docs/assets/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="logo">JoyCDN Docs</div>
+    <nav class="top-icons">
+      <a href="https://github.com/JoyCode-Studios/docs" class="icon-link" title="GitHub" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="https://www.youtube.com/@JoyCode-Studios" class="icon-link" title="YouTube" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+      <a href="#" class="icon-link" id="theme-icon" title="Toggle Theme">🌙</a>
+    </nav>
+  </div>
+</header>
+
+<aside class="sidebar">
+  <nav>
+    <ul class="section">
+      <li class="section-title">JoyCDN Docs</li>
+      <li><a href="getting-started.html">1. Getting Started</a></li>
+      <li><a href="joy.css.html">2. joy.css</a></li>
+      <li><a href="dark.css.html">3. dark.css</a></li>
+      <li><a href="light.css.html">4. light.css</a></li>
+      <li><a href="contrast.css.html">5. contrast.css</a></li>
+      <li><a class="active" href="retro.css.html">6. retro.css</a></li>
+      <li><a href="minimal.css.html">7. minimal.css</a></li>
+    </ul>
+    <ul class="section">
+      <li class="section-title">JoyCDN Widgets</li>
+      <li><a href="live-clock.html">8. Live Clock</a></li>
+      <li><a href="new-year-timer.html">9. New Year Timer</a></li>
+    </ul>
+  </nav>
+</aside>
+
+<main class="content">
+  <h1>6. retro.css</h1>
+
+  <p>
+    <strong>retro.css</strong> is JoyCDN’s throwback theme — a bold, pixel-style design that channels the energy of early web interfaces. With monospaced fonts, uppercase headings, and thick black borders, it’s perfect for creative sites, developer portfolios, or anything that wants to feel fun and unapologetically old-school.
+  </p>
+
+  <h2>📦 How to Use</h2>
+  <p>To apply <code>retro.css</code> to your site, include this in your HTML:</p>
+  <pre><code>&lt;link rel="stylesheet" href="https://cdn.joycode.co.uk/themes/retro.css"&gt;</code></pre>
+
+  <h2>🎨 Visual System</h2>
+  <ul>
+    <li><strong>Font body:</strong> <code>'Courier New', monospace</code></li>
+    <li><strong>Headings:</strong> <code>'Impact', sans-serif</code>, all uppercase</li>
+    <li><strong>Background:</strong> <code>#fef3c7</code> (warm cream)</li>
+    <li><strong>Text:</strong> <code>#111</code> (deep gray)</li>
+    <li><strong>Accent:</strong> <code>#ff0066</code> (hot pink), hover: <code>#cc0052</code></li>
+    <li><strong>Card background:</strong> <code>#fff8dc</code> (cornsilk)</li>
+    <li><strong>Border:</strong> <code>#000</code>, 2px solid</li>
+    <li><strong>Shadow:</strong> <code>4px 4px 0 #000</code> (pixel-style drop)</li>
+    <li><strong>Radius:</strong> 0 (no rounding)</li>
+  </ul>
+
+  <h2>🔘 Buttons</h2>
+  <p>
+    Buttons are bold, boxy, and unmistakable. They use the accent pink background, white text, thick black borders, and a hard shadow. On hover, the pink deepens.
+  </p>
+  <pre><code>&lt;button class="button"&gt;RETRO ACTION&lt;/button&gt;</code></pre>
+
+  <h2>📦 Cards</h2>
+  <p>
+    Cards are styled with a cornsilk background, black border, and a chunky shadow. They’re perfect for retro-styled panels, quotes, or content blocks.
+  </p>
+
+  <h2>📝 Forms</h2>
+  <p>
+    Inputs, selects, and textareas use:
+  </p>
+  <ul>
+    <li>Monospaced font</li>
+    <li>2px solid black borders</li>
+    <li>White background, black text</li>
+    <li><strong>Focus outline:</strong> 2px dashed hot pink</li>
+  </ul>
+
+  <h2>📢 Alerts</h2>
+  <p>Alert boxes are loud and proud:</p>
+  <ul>
+    <li><code>.alert-info</code>: <code>#d0f0fd</code> background, <code>#003366</code> text</li>
+    <li><code>.alert-success</code>: <code>#d0fdd0</code> background, <code>#006600</code> text</li>
+    <li><code>.alert-error</code>: <code>#fdd0d0</code> background, <code>#990000</code> text</li>
+  </ul>
+
+  <h2>📐 Layout Helpers</h2>
+  <ul>
+    <li><code>.flex</code>, <code>.grid</code>, <code>.center</code>, <code>.hidden</code></li>
+    <li>All spacing and alignment utilities are preserved</li>
+  </ul>
+
+  <h2>🧪 Best Practices</h2>
+  <ul>
+    <li>Use uppercase headings for full retro effect</li>
+    <li>Pair with pixel art or 8-bit icons for visual consistency</li>
+    <li>Use <code>.card</code> and <code>.button</code> for maximum style impact</li>
+    <li>To apply this theme, manually update your <code>&lt;link&gt;</code> tag</li>
+  </ul>
+
+  <h2>📜 License</h2>
+  <p>
+    JoyCDN is currently closed-source. Redistribution or modification of the CSS files is not permitted without permission.
+  </p>
+</main>
+
+<script src="../assets/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JoyCode Docs – Manifest Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link id="themeStylesheet" rel="stylesheet" href="https://joycode-studios.github.io/docs/assets/style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="topbar-inner">
+        <div class="logo">JoyCode StudiosDocs</div>
+        <nav class="top-icons">
+            <a href="https://github.com/JoyCode-Studios/docs" class="icon-link" title="GitHub" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.youtube.com/@JoyCode-Studios" class="icon-link" title="YouTube" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="#" class="icon-link" id="theme-icon" title="Toggle Theme">🌙</a>
+        </nav>
+    </div>
+</header>
+
+<aside class="sidebar">
+    <nav>
+        <ul class="section">
+            <li class="section-title">JoyCode Docs</li>
+            <li><a href="mission.html">1. Mission</a></li>
+            <li><a href="navigation.html">2. Navigation</a></li>
+            <li><a class="active" href="manifest-tool.html">3. Manifest Generator</a></li>
+            <li><a href="community.html">4. Community</a></li>
+            <li><a href="legal.html">5. Legal & Privacy</a></li>
+        </ul>
+    </nav>
+</aside>
+
+<main class="content">
+    <h1>3. Manifest Generator</h1>
+
+    <p>
+        The <strong>Manifest Generator</strong> is a lightweight, browser-based tool designed to help Minecraft Bedrock creators quickly generate valid <code>manifest.json</code> files for their packs. Whether you're building a behavior pack, resource pack, or skin pack, this tool ensures your manifest is correctly structured and ready to use — no manual JSON editing required.
+    </p>
+
+    <h2>Accessing the Tool</h2>
+    <p>
+        You can access the Manifest Generator directly at: <br>
+        <a href="https://pack-manifest-generator.pages.dev/" target="_blank" rel="noopener noreferrer">
+            https://pack-manifest-generator.pages.dev/
+        </a>
+    </p>
+
+    <h2>What Is a Manifest?</h2>
+    <p>
+        In Minecraft Bedrock Edition, every add-on or pack must include a <code>manifest.json</code> file. This file tells the game what kind of pack it is, what it's called, and how it should behave. Without a valid manifest, your pack won't load.
+    </p>
+
+    <h2>Supported Pack Types</h2>
+    <ul>
+        <li><strong>Behavior Pack</strong> – Contains custom scripts and logic for entities, blocks, and gameplay mechanics.</li>
+        <li><strong>Resource Pack</strong> – Includes textures, sounds, models, and UI changes.</li>
+        <li><strong>Skin Pack</strong> – Defines custom player skins for use in-game.</li>
+    </ul>
+
+    <h2>Using the Generator</h2>
+    <ol>
+        <li>Open the Manifest Generator in your browser.</li>
+        <li>Enter a <strong>Pack Name</strong>. This is the display name shown in Minecraft.</li>
+        <li>Provide a <strong>Description</strong>. This appears in the in-game UI.</li>
+        <li>Select a <strong>Pack Type</strong> from the dropdown menu.</li>
+        <li>Click <strong>Generate Manifest</strong>.</li>
+        <li>The generated <code>manifest.json</code> will appear below the form.</li>
+        <li>Click <strong>Download manifest.json</strong> to save the file locally.</li>
+    </ol>
+
+    <h2>Generated Output</h2>
+    <p>
+        The tool creates a valid <code>manifest.json</code> file with the following structure:
+    </p>
+
+    <pre><code>{
+  "format_version": 2,
+  "header": {
+    "name": "Your Pack Name",
+    "description": "Your Description",
+    "uuid": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 16, 0]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "version": [1, 0, 0]
+    }
+  ]
+}</code></pre>
+
+    <p>
+        The UUIDs are automatically generated using a secure random generator. These must be unique for each pack and module.
+    </p>
+
+    <h2>Best Practices</h2>
+    <ul>
+        <li><strong>Use unique UUIDs</strong> for every new pack or version. Reusing UUIDs can cause conflicts or loading errors.</li>
+        <li><strong>Keep your version numbers consistent</strong> across updates. Minecraft uses this to determine compatibility.</li>
+        <li><strong>Double-check your pack type</strong>. Using the wrong type (e.g. resource vs behavior) will prevent your pack from loading.</li>
+        <li><strong>Use clear, descriptive names</strong> for your packs to avoid confusion in the in-game UI.</li>
+    </ul>
+
+    <h2>Limitations</h2>
+    <p>
+        This tool is intentionally minimal. It does not support:
+    </p>
+    <ul>
+        <li>Multiple modules in a single manifest</li>
+        <li>Custom UUID input (currently auto-generated only)</li>
+        <li>Advanced manifest features like dependencies or capabilities</li>
+    </ul>
+
+    <h2>Privacy & Offline Use</h2>
+    <p>
+        The Manifest Generator runs entirely in your browser. No data is sent to a server, and nothing is stored unless you download the file. You can even use it offline after the first load — just bookmark the page or install it as a PWA.
+    </p>
+
+    <h2>Known Issues</h2>
+    <ul>
+        <li>Some older browsers may not support UUID generation.</li>
+        <li>Skin pack support is limited to basic metadata only.</li>
+        <li>There is no validation for special characters in names or descriptions.</li>
+    </ul>
+
+    <h2>Changelog</h2>
+    <ul>
+        <li><strong>v1.2</strong> – Added skin pack support, improved UUID generation.</li>
+        <li><strong>v1.1</strong> – Added download button and offline support.</li>
+        <li><strong>v1.0</strong> – Initial release with behavior/resource pack support.</li>
+    </ul>
+
+    <h2>Feedback & Contributions</h2>
+    <p>
+        This tool is open to feedback and contributions. If you have suggestions, bug reports, or want to contribute code, visit the GitHub repository:
+    </p>
+    <p>
+        <a href="https://github.com/JoyCode-Studios/manifest-generator" target="_blank" rel="noopener noreferrer">
+            github.com/JoyCode-Studios/manifest-generator
+        </a>
+    </p>
+</main>
+
+<script src="../assets/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JoyCDN Docs - dark.css</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link id="themeStylesheet" rel="stylesheet" href="https://joycode-studios.github.io/docs/assets/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="logo">JoyCDN Docs</div>
+    <nav class="top-icons">
+      <a href="https://github.com/JoyCode-Studios/docs" class="icon-link" title="GitHub" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="https://www.youtube.com/@JoyCode-Studios" class="icon-link" title="YouTube" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+      <a href="#" class="icon-link" id="theme-icon" title="Toggle Theme">🌙</a>
+    </nav>
+  </div>
+</header>
+
+<aside class="sidebar">
+  <nav>
+    <ul class="section">
+      <li class="section-title">JoyCDN Docs</li>
+      <li><a href="getting-started.html">1. Getting Started</a></li>
+      <li><a href="joy.css.html">2. joy.css</a></li>
+      <li><a class="active" href="dark.css.html">3. dark.css</a></li>
+      <li><a href="light.css.html">4. light.css</a></li>
+      <li><a href="contrast.css.html">5. contrast.css</a></li>
+      <li><a href="retro.css.html">6. retro.css</a></li>
+      <li><a href="minimal.css.html">7. minimal.css</a></li>
+    </ul>
+    <ul class="section">
+      <li class="section-title">JoyCDN Widgets</li>
+      <li><a href="live-clock.html">8. Live Clock</a></li>
+      <li><a href="new-year-timer.html">9. New Year Timer</a></li>
+    </ul>
+  </nav>
+</aside>
+
+<main class="content">
+  <h1>3. dark.css</h1>
+
+  <p>
+    <strong>dark.css</strong> is the official dark mode theme in the JoyCDN collection. It’s designed for low-light environments, high-contrast readability, and a sleek, modern aesthetic. It pairs beautifully with minimal UIs, developer tools, and documentation sites.
+  </p>
+
+  <h2>📦 How to Use</h2>
+  <p>To apply <code>dark.css</code> to your site, include this in your HTML:</p>
+  <pre><code>&lt;link rel="stylesheet" href="https://cdn.joycode.co.uk/themes/dark.css"&gt;</code></pre>
+
+  <h2>🎨 Color Palette</h2>
+  <p>The theme uses a dark-neutral base with soft accents:</p>
+  <ul>
+    <li><code>--color-bg</code>: Deep charcoal background</li>
+    <li><code>--color-text</code>: Light gray or off-white text</li>
+    <li><code>--color-accent</code>: Muted blue or teal for buttons and links</li>
+    <li><code>--color-card</code>: Slightly lighter panels for cards and containers</li>
+    <li><code>--color-border</code>: Subtle outlines for inputs and dividers</li>
+  </ul>
+
+  <h2>🧱 Base Styling</h2>
+  <p>
+    The theme applies a dark background to the <code>body</code>, adjusts text color for contrast, and preserves the same spacing, font stack, and layout helpers as <code>joy.css</code>.
+  </p>
+
+  <h2>🔘 Buttons</h2>
+  <p>
+    Buttons use the accent color for background and white text. On hover, the accent darkens slightly. The button shape, padding, and font weight remain consistent with other themes.
+  </p>
+
+  <h2>📦 Cards</h2>
+  <p>
+    Cards use a slightly elevated background color to distinguish them from the page. They retain the same border radius and shadow as in <code>joy.css</code>, but with darker tones.
+  </p>
+
+  <h2>📝 Forms</h2>
+  <p>
+    Input fields, selects, and textareas are styled with dark backgrounds, light text, and soft borders. Focus states use the accent color to indicate interactivity.
+  </p>
+
+  <h2>📢 Alerts</h2>
+  <p>
+    Alert boxes are adapted for dark mode with adjusted background and text colors:
+  </p>
+  <ul>
+    <li><code>.alert-info</code>: Navy background with light blue text</li>
+    <li><code>.alert-success</code>: Dark green background with mint text</li>
+    <li><code>.alert-error</code>: Deep red background with soft pink text</li>
+  </ul>
+
+  <h2>📐 Layout Utilities</h2>
+  <p>
+    All layout helpers from <code>joy.css</code> are preserved:
+  </p>
+  <ul>
+    <li><code>.flex</code>, <code>.grid</code>, <code>.center</code>, <code>.hidden</code></li>
+    <li>Spacing and alignment utilities remain unchanged</li>
+  </ul>
+
+  <h2>🧪 Best Practices</h2>
+  <ul>
+    <li>Use semantic HTML for optimal styling and accessibility</li>
+    <li>Ensure sufficient contrast for custom elements</li>
+    <li>Use <code>.card</code> and <code>.button</code> classes for consistent UI</li>
+    <li>To switch to dark.css, manually update the <code>&lt;link&gt;</code> tag in your HTML</li>
+  </ul>
+
+  <h2>📜 License</h2>
+  <p>
+    JoyCDN is currently closed-source. Redistribution or modification of the CSS files is not permitted without permission.
+  </p>
+</main>
+
+<script src="../assets/script.js"></script>
+</body>
+</html>
