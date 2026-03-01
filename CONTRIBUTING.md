@@ -33,7 +33,7 @@ You can contribute to:
 - content structure
 - performance improvements
 - The README.md
-Please keep changes focused and scoped to a single purpose. If you wish to contribute to multiple purposes, please do this seperately. You may never update this `CONTRIBUTING.md`.
+Please keep changes focused and scoped to a single purpose. If you wish to contribute to multiple purposes, please do this seperately. You may never update this `CONTRIBUTING.md` or our `CODE_OF_CONDUCT`.
 
 ### 4. Commit with a clear message
 Make sure your commits have a clear message:
@@ -93,6 +93,7 @@ This helps keep the documentation stable across all JoyCode projects.
 
 By contributing, you agree that your contributions will be licensed under the MIT License, the same license used by this project.
 This ensures the entire JoyCode ecosystem remains open, flexible, and developer‑friendly.
+If you do not agree, please do not submit a PR.
 
 ---
 
